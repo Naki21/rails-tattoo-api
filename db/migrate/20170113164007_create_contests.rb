@@ -5,7 +5,7 @@ class CreateContests < ActiveRecord::Migration
       t.integer :prize, null: false
       t.date :end_date, null: false
       t.string :description, null: false, limit: 160
-      t.references :user, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true, null: false
 
       t.timestamps null: false
     end

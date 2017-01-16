@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170113164007) do
     t.integer  "prize",                   null: false
     t.date     "end_date",                null: false
     t.string   "description", limit: 160, null: false
-    t.integer  "user_id"
+    t.integer  "user_id",                 null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
