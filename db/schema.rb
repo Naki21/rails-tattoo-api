@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113164007) do
+ActiveRecord::Schema.define(version: 20170117152608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,16 @@ ActiveRecord::Schema.define(version: 20170113164007) do
 
   add_index "examples", ["user_id"], name: "index_examples_on_user_id", using: :btree
 
+  create_table "submissions", force: :cascade do |t|
+    t.string   "image",                  null: false
+    t.integer  "rating",     default: 0, null: false
+    t.integer  "contest_id",             null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "submissions", ["contest_id"], name: "index_submissions_on_contest_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
     t.string   "token",           null: false
@@ -51,4 +61,5 @@ ActiveRecord::Schema.define(version: 20170113164007) do
 
   add_foreign_key "contests", "users"
   add_foreign_key "examples", "users"
+  add_foreign_key "submissions", "contests"
 end
