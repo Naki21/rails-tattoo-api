@@ -41,3 +41,284 @@ DETAIL:  There is 1 other session using the database.
 STATEMENT:  DROP DATABASE IF EXISTS "rails-tattoo-api_development"
 ERROR:  database "rails-tattoo-api_development" already exists
 STATEMENT:  CREATE DATABASE "rails-tattoo-api_development" ENCODING = 'unicode'
+LOG:  database system was shut down at 2017-01-17 20:38:21 EST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  cached plan must not change result type
+STATEMENT:  SELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT 1
+ERROR:  cached plan must not change result type
+STATEMENT:  SELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT 1
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (1, hi, null, null, 2017-01-18 18:55:29.128225, 2017-01-18 18:55:29.128225, null, null).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (2, hi, null, null, 2017-01-18 18:58:07.964766, 2017-01-18 18:58:07.964766, null, null).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (3, null, null, null, 2017-01-18 19:00:03.776195, 2017-01-18 19:00:03.776195, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (4, hi, null, null, 2017-01-18 19:00:09.051689, 2017-01-18 19:00:09.051689, null, null).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (5, www.www.www, null, null, 2017-01-18 19:02:40.939152, 2017-01-18 19:02:40.939152, null, null).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (6, www.www.www, null, null, 2017-01-18 19:05:32.899851, 2017-01-18 19:05:32.899851, Hello, Hello).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (7, ihihihihihihi, null, null, 2017-01-18 19:07:12.42835, 2017-01-18 19:07:12.42835, ihihihihih, hihihih).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (8, lkjhlkjhlkjh, null, null, 2017-01-18 19:07:50.654209, 2017-01-18 19:07:50.654209, lkjhlkjhlkjhlkj, kjhlkjhlkjhlkjh).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "rating" violates not-null constraint
+DETAIL:  Failing row contains (9, ojojojoj, null, null, 2017-01-18 19:09:15.67643, 2017-01-18 19:09:15.67643, ojojojoj, ojojojoj).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "title" violates not-null constraint
+DETAIL:  Failing row contains (1, http://dummyimage.com/200x200.png/5fa2dd/ffffff, 0, 1, 2017-01-18 19:10:23.874573, 2017-01-18 19:10:23.874573, null, null).
+STATEMENT:  INSERT INTO "submissions" ("id", "image", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"
+ERROR:  null value in column "title" violates not-null constraint
+DETAIL:  Failing row contains (1, http://dummyimage.com/200x200.png/5fa2dd/ffffff, 0, 1, 2017-01-18 19:11:24.889983, 2017-01-18 19:11:24.889983, null, null).
+STATEMENT:  INSERT INTO "submissions" ("id", "image", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"
+ERROR:  database "rails-tattoo-api_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "rails-tattoo-api_development"
+ERROR:  database "rails-tattoo-api_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "rails-tattoo-api_development"
+ERROR:  database "rails-tattoo-api_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "rails-tattoo-api_development"
+ERROR:  null value in column "title" violates not-null constraint
+DETAIL:  Failing row contains (1, http://dummyimage.com/200x200.png/5fa2dd/ffffff, 0, 1, 2017-01-18 19:14:07.90824, 2017-01-18 19:14:07.90824, null, null).
+STATEMENT:  INSERT INTO "submissions" ("id", "image", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"
+ERROR:  insert or update on table "submissions" violates foreign key constraint "fk_rails_2c7e44248d"
+DETAIL:  Key (contest_id)=(1) is not present in table "contests".
+STATEMENT:  INSERT INTO "submissions" ("id", "image", "title", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  insert or update on table "submissions" violates foreign key constraint "fk_rails_2c7e44248d"
+DETAIL:  Key (contest_id)=(1) is not present in table "contests".
+STATEMENT:  INSERT INTO "submissions" ("id", "image", "title", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (1, URL, null, null, 2017-01-18 19:16:46.500858, 2017-01-18 19:16:46.500858, Description, Title).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (2, kjkjkj, null, null, 2017-01-18 19:20:03.155702, 2017-01-18 19:20:03.155702, kjkjk, kjkj).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (3, ;lk;lk, null, null, 2017-01-18 19:20:36.731768, 2017-01-18 19:20:36.731768, lk;lk, ;lk;l).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (4, lkjhkj, null, null, 2017-01-18 19:21:00.037303, 2017-01-18 19:21:00.037303, lklk, lkjlk).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (5, jj, null, null, 2017-01-18 19:21:57.165367, 2017-01-18 19:21:57.165367, jj, jj).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (6, kjhkjhk, null, null, 2017-01-18 19:23:42.422603, 2017-01-18 19:23:42.422603, kjhkjhk, kkjhkj).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (7, kjkjkj, null, null, 2017-01-18 19:24:07.270425, 2017-01-18 19:24:07.270425, kjkjkj, jjjk).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (8, lklklk, null, null, 2017-01-18 19:24:52.946487, 2017-01-18 19:24:52.946487, lklkl, lklklk).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (9, kjkjk, null, null, 2017-01-18 19:31:45.505433, 2017-01-18 19:31:45.505433, kjkjkj, kjkj).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (10, lkjlkj, null, null, 2017-01-18 19:33:43.636452, 2017-01-18 19:33:43.636452, lkjlkj, lkjlk).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (11, lkj, null, null, 2017-01-18 19:35:50.094749, 2017-01-18 19:35:50.094749, lkj, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (12, lkj, null, null, 2017-01-18 19:37:12.58212, 2017-01-18 19:37:12.58212, lkj, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (13, lkj, null, null, 2017-01-18 19:37:32.506628, 2017-01-18 19:37:32.506628, lkj, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (14, lkj, null, null, 2017-01-18 19:37:53.09501, 2017-01-18 19:37:53.09501, lkj, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (15, lkj, null, null, 2017-01-18 19:38:10.885834, 2017-01-18 19:38:10.885834, lkj, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (16, lkj, null, null, 2017-01-18 19:38:29.143075, 2017-01-18 19:38:29.143075, lkj, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (17, lkj, null, null, 2017-01-18 19:38:45.501342, 2017-01-18 19:38:45.501342, lkj, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (18, lkj, null, null, 2017-01-18 19:39:44.744451, 2017-01-18 19:39:44.744451, lkj
+	, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (19, lkj, null, null, 2017-01-18 19:40:28.21586, 2017-01-18 19:40:28.21586, lkj
+	, lo).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  database "rails-tattoo-api_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "rails-tattoo-api_development"
+ERROR:  database "rails-tattoo-api_development" already exists
+STATEMENT:  CREATE DATABASE "rails-tattoo-api_development" ENCODING = 'unicode'
+ERROR:  duplicate key value violates unique constraint "submissions_pkey"
+DETAIL:  Key (id)=(1) already exists.
+STATEMENT:  INSERT INTO "submissions" ("id", "image", "title", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (20, lkjlkj, null, null, 2017-01-18 19:42:07.403909, 2017-01-18 19:42:07.403909, lkjlkj, kljl).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  insert or update on table "submissions" violates foreign key constraint "fk_rails_2c7e44248d"
+DETAIL:  Key (contest_id)=(1) is not present in table "contests".
+STATEMENT:  INSERT INTO "submissions" ("id", "image", "title", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  database "rails-tattoo-api_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "rails-tattoo-api_development"
+ERROR:  database "rails-tattoo-api_development" already exists
+STATEMENT:  CREATE DATABASE "rails-tattoo-api_development" ENCODING = 'unicode'
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (1, lkjlkj, null, null, 2017-01-18 19:49:47.65341, 2017-01-18 19:49:47.65341, lkjlkj, lkjl).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "contest_id" violates not-null constraint
+DETAIL:  Failing row contains (2, kj, null, null, 2017-01-18 20:03:27.737466, 2017-01-18 20:03:27.737466, kj, kj).
+STATEMENT:  INSERT INTO "submissions" ("image", "rating", "description", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (3, null, null, null, 2017-01-18 20:03:39.976215, 2017-01-18 20:03:39.976215, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (4, null, null, null, 2017-01-18 20:04:11.828636, 2017-01-18 20:04:11.828636, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (5, null, null, null, 2017-01-18 20:04:52.1229, 2017-01-18 20:04:52.1229, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (6, null, null, null, 2017-01-18 20:05:02.441335, 2017-01-18 20:05:02.441335, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (7, null, null, null, 2017-01-18 20:09:39.606997, 2017-01-18 20:09:39.606997, null, lkj).
+STATEMENT:  INSERT INTO "submissions" ("rating", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (8, null, null, null, 2017-01-18 20:10:24.167679, 2017-01-18 20:10:24.167679, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (9, null, null, null, 2017-01-18 20:11:22.18138, 2017-01-18 20:11:22.18138, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (10, null, null, null, 2017-01-18 20:11:38.551198, 2017-01-18 20:11:38.551198, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (11, null, null, null, 2017-01-18 20:12:01.577019, 2017-01-18 20:12:01.577019, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (12, null, null, null, 2017-01-18 20:12:22.482931, 2017-01-18 20:12:22.482931, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (13, null, null, null, 2017-01-18 20:12:46.545902, 2017-01-18 20:12:46.545902, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (14, null, null, null, 2017-01-18 20:12:59.887869, 2017-01-18 20:12:59.887869, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (15, null, null, null, 2017-01-18 20:13:57.084177, 2017-01-18 20:13:57.084177, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (16, null, null, null, 2017-01-18 20:14:08.036031, 2017-01-18 20:14:08.036031, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (17, null, null, null, 2017-01-18 20:14:42.939847, 2017-01-18 20:14:42.939847, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (18, null, null, null, 2017-01-18 20:15:16.147078, 2017-01-18 20:15:16.147078, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (19, null, null, null, 2017-01-18 20:24:52.174702, 2017-01-18 20:24:52.174702, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (20, null, null, null, 2017-01-18 20:28:32.477466, 2017-01-18 20:28:32.477466, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (21, null, null, null, 2017-01-18 20:29:01.023157, 2017-01-18 20:29:01.023157, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (22, null, null, null, 2017-01-18 20:30:36.136784, 2017-01-18 20:30:36.136784, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (23, null, null, null, 2017-01-18 20:31:02.664463, 2017-01-18 20:31:02.664463, , null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (24, null, null, null, 2017-01-18 20:31:21.342436, 2017-01-18 20:31:21.342436, , null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (25, null, null, null, 2017-01-18 20:31:52.520304, 2017-01-18 20:31:52.520304, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (26, null, null, null, 2017-01-18 20:32:07.670935, 2017-01-18 20:32:07.670935, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (27, null, null, null, 2017-01-18 20:32:23.596311, 2017-01-18 20:32:23.596311, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (28, null, null, null, 2017-01-18 20:32:34.003537, 2017-01-18 20:32:34.003537, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (29, null, null, null, 2017-01-18 20:34:22.743111, 2017-01-18 20:34:22.743111, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (30, null, null, null, 2017-01-18 20:34:48.522108, 2017-01-18 20:34:48.522108, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (31, null, null, null, 2017-01-18 20:34:51.588114, 2017-01-18 20:34:51.588114, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (32, null, null, null, 2017-01-18 20:35:06.137668, 2017-01-18 20:35:06.137668, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (33, null, null, null, 2017-01-18 20:50:31.99955, 2017-01-18 20:50:31.99955, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (34, null, null, null, 2017-01-18 20:50:51.834093, 2017-01-18 20:50:51.834093, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (35, null, null, null, 2017-01-18 20:53:07.17071, 2017-01-18 20:53:07.17071, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (36, null, null, null, 2017-01-18 20:53:36.476301, 2017-01-18 20:53:36.476301, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (37, null, null, null, 2017-01-18 20:54:14.10637, 2017-01-18 20:54:14.10637, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (38, null, null, null, 2017-01-18 20:54:45.069246, 2017-01-18 20:54:45.069246, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (39, null, null, null, 2017-01-18 20:55:11.713601, 2017-01-18 20:55:11.713601, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (40, null, null, null, 2017-01-18 20:55:49.388258, 2017-01-18 20:55:49.388258, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (41, null, null, null, 2017-01-18 20:56:39.925439, 2017-01-18 20:56:39.925439, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (42, null, null, null, 2017-01-18 21:00:56.798903, 2017-01-18 21:00:56.798903, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (43, null, null, null, 2017-01-18 21:13:12.640613, 2017-01-18 21:13:12.640613, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (44, null, null, null, 2017-01-18 22:09:54.393443, 2017-01-18 22:09:54.393443, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (45, null, null, null, 2017-01-18 23:00:40.56622, 2017-01-18 23:00:40.56622, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (46, null, null, null, 2017-01-18 23:00:58.056452, 2017-01-18 23:00:58.056452, null, null).
+STATEMENT:  INSERT INTO "submissions" ("rating", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (47, null, 0, 1, 2017-01-18 23:01:20.605893, 2017-01-18 23:01:20.605893, null, ).
+STATEMENT:  INSERT INTO "submissions" ("title", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+ERROR:  null value in column "image" violates not-null constraint
+DETAIL:  Failing row contains (48, null, 0, 1, 2017-01-18 23:01:21.822502, 2017-01-18 23:01:21.822502, null, ).
+STATEMENT:  INSERT INTO "submissions" ("title", "contest_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
